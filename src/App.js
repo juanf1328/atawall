@@ -81,7 +81,7 @@ class App extends React.Component {
 </Row>
 <Row>
   <Col span={8}>
-    <div className="language-container">
+    <div className="language-container">  
       <Button style={{ color:'#7c7c7c', background:'#1b1b1b', borderColor:'#1b1b1b' }} onClick={() => this.changeLanguage('english')} className="language-button">ENG</Button>
       <div className="language-divider" />
       <Button style={{ color:'#7c7c7c', background:'#1b1b1b', borderColor:'#1b1b1b' }} onClick={() => this.changeLanguage('spanish')} className="language-button">ESP</Button>
