@@ -1,29 +1,76 @@
+body {
+  background-color: #1b1b1b;
+  color: white;
+  font-family: 'Helvetica Neue', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
 .login-container {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #ffffff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
- }
- 
- .login-container h1 {
   text-align: center;
-  margin-bottom: 20px;
- }
- 
- .login-container button {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+h1 {
+  margin-bottom: 10rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+input {
   width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
+}
+
+input::placeholder {
+  color: #ccc;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column; /* Ajusta la dirección del contenedor a columna */
+  align-items: center; /* Centra los elementos horizontalmente */
   margin-top: 10px;
- }
- 
- .login-container .ant-btn-primary {
-  background-color: #007BFF;
-  border-color: #007BFF;
- }
- 
- .login-container .ant-btn-primary:hover,
- .login-container .ant-btn-primary:focus {
-  background-color: #0056b3;
-  border-color: #0056b3;
- }
+  margin-right: -7.5rem;
+}
+
+.language-container {
+  display: flex;
+  align-items: center; /* Centra los elementos horizontalmente */
+  margin-left: 0.5rem;
+}
+
+.language-divider {
+  width: 2px;
+  height: 15px; /* Ajusta la altura del divisor según sea necesario */
+  background-color: #05c988;
+  margin: 0 10px; /* Ajusta el espacio alrededor del divisor */
+}
+
+button {
+  background-color: #05c988;
+  color: white;
+  padding: 4px 45px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.language-button {
+  margin-right: 20px;
+}
+
+/* Otros estilos... */
