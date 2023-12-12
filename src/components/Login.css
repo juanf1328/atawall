@@ -1,51 +1,86 @@
-.login-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-    background-color: #d1d1d1;
-  }
-  
-  h1 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  label {
-    margin-bottom: 10px;
-  }
-  
-  input[type="text"],
-  input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  button[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #45a049;
-  }
+body {
+  background-color: #1b1b1b;
+  color: white;
+  font-family: 'Helvetica Neue', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-size: 1.5rem;
+  zoom: 1;
+}
+
+.login-container {
+  text-align: center;
+  border-radius: 10px;
+  padding: 3rem;
+}
+
+h1 {
+  margin-bottom: 10rem;
+  font-size: 3rem; 
+  margin-bottom: 5rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
+  font-size: 1.2rem;
+}
+
+input::placeholder {
+  color: #ccc;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column; /* Ajusta la dirección del contenedor a columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  margin-top: 10px;
+  margin-right: -8.5rem;
+}
+
+.language-container {
+  display: flex;
+  align-items: center; /* Centra los elementos horizontalmente */
+  margin-left: 1rem;
+}
+
+.language-divider {
+  width: 2px;
+  height: 15px; /* Ajusta la altura del divisor según sea necesario */
+  background-color: #05c988;
+  margin: 0 10px; /* Ajusta el espacio alrededor del divisor */
+}
+
+button {
+  background-color: #05c988;
+  color: white;
+  padding: 4px 45px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1.5rem; 
+}
+
+.language-button {
+  margin-right: 20px;
+  font-size: 1.2rem; 
+}
+.language-divider {
+  /* Otros estilos... */
+  height: 1.5rem;  /* Ajusta la altura del divisor entre botones de idioma */
+}
+/* Otros estilos... */
