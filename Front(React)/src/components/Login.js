@@ -58,6 +58,11 @@ const Login = () => {
     }
   };
 
+  const handleRegisterClick = () => {
+    // Redirige al usuario a la página de registro
+    navigate('/register');
+  };
+
   return (
     <div className="login-container">
       <h1>{language === 'english' ? 'atawall' : 'atawall'}</h1>
@@ -105,7 +110,7 @@ const Login = () => {
             </Button>
           </div>
           <div className="button-container">
-            <Button style={{ width: '15rem', marginTop: '10px', background: '#1b1b1b', color: '#fff', borderColor: '#fff' }}>{language === 'english' ? 'Register' : 'Registrarme'}</Button>
+            <Button onClick={handleRegisterClick} style={{ width: '15rem', marginTop: '10px', background: '#1b1b1b', color: '#fff', borderColor: '#fff' }}>{language === 'english' ? 'Register' : 'Registrarme'}</Button>
           </div>
         </Col>
       </Row>
