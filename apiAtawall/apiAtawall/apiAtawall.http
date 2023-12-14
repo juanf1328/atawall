@@ -1,6 +1,0 @@
-@apiAtawall_HostAddress = http://localhost:5092
-
-GET {{apiAtawall_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
