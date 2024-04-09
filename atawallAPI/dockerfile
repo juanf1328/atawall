@@ -1,0 +1,37 @@
+#Argunento que se usa al buildear la imagen, si no se utiliza en el docker build va "dev" por defecto
+ARG ambiente=dev
+
+FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
+WORKDIR /app
+ENV ASPNETCORE_ENVIRONMENT=Development
+EXPOSE 80
+
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS publish
+WORKDIR /src
+COPY ["atawallAPI/atawallAPI.csproj", "atawallAPI/"]
+RUN dotnet restore "atawallAPI/atawallAPI.csproj"
+COPY . .
+WORKDIR "/src/atawallAPI"
+RUN dotnet build "atawallAPI.csproj" -c Release -o /app/build
+RUN dotnet publish "atawallAPI.csproj" -c Release -o /app/publish /p:UseAppHost=false
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+RUN rm -f appsettings.json
+
+#En base al ambiente cargamos el .json correspondiente, por defecto va Dev
+FROM final as dev
+RUN mv appsettings-dev.json appsettings.json
+
+FROM final as test
+RUN mv appsettings-test.json appsettings.json
+
+FROM final as demo
+RUN mv appsettings-demo.json appsettings.json
+
+FROM final as prod
+RUN mv appsettings-prod.json appsettings.json
+
+FROM ${ambiente} 
+ENTRYPOINT ["dotnet", "atawallAPI.dll"]
